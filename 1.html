@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body style="background:url(img/1.jpg);width:100%;height:100%">
+    <div>
+         <h1 style="font-size:40px;margin-left:40%">图书管理系统</h1> 
+
+        <div style="margin-left:30%;margin-top:7%">
+                <form action="2.html" medhod="get" onsubmit="return myFunction()">
+                        
+                        <h2>用户：
+                        
+                        <input id="user" type="text" name="user" /></h2>
+                        
+                        <h2>密码：
+                        
+                        <input id="password" type="password" name="password" /></h2><br/>
+                        
+                        <span id="tipMsg" style="color:red;"></span><br/>
+                        
+                        <input type="submit" value="确定" />
+                        <button> <a href="3.html">注册</a></button>
+                        
+                        </from>
+                        
+                        <p id="mess"></p>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        
+        function myFunction()
+        
+        {
+        
+        var flag=false;
+        
+        var x="",y="";
+        
+        x=document.getElementById("user").value;
+        
+        y=document.getElementById("password").value;
+        
+        var tip=document.getElementById("tipMsg");
+        
+        if(x==""||y==""){
+        
+        tip.innerHTML="用户名或密码不能为空!";
+        
+        }else if(x=="王家赫"&& y=="123456") {
+        
+        tip.innerHTML="";
+        
+        flag=true;
+        
+        }else{
+        
+        tip.innerHTML="用户名或密码错误!";
+        
+        }
+        
+        return flag;
+        
+        }
+        
+        </script>
+     
+</body>
+</html>
